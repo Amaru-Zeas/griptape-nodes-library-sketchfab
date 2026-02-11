@@ -1,14 +1,15 @@
 [project]
-name = "example_nodes_template"
+name = "sketchfab_nodes"
 version = "0.1.0"
-description = "Template for Users to create Custom Libraries and Nodes"
+description = "Griptape Nodes library for Sketchfab 3D model search, viewer embedding, and downloads"
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Griptape Community", email = "community@griptape.ai"}
 ]
 readme = "README.md"
 requires-python = "~=3.12"
 dependencies = [
     "griptape-nodes",
+    "requests>=2.25.0",
 ]
 
 [tool.uv.sources]
