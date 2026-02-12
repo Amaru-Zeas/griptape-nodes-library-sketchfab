@@ -1,0 +1,106 @@
+{
+    "name": "Sketchfab 3D Library",
+    "library_schema_version": "0.1.0",
+    "metadata": {
+        "author": "Griptape Community",
+        "description": "Search, view, and download 3D models from Sketchfab using the Data API v3 and Viewer API",
+        "library_version": "0.1.0",
+        "engine_version": "0.66.0",
+        "tags": [
+            "Griptape",
+            "Sketchfab",
+            "3D Models",
+            "Viewer",
+            "API"
+        ],
+        "dependencies": {
+            "pip_dependencies": [
+                "requests>=2.25.0"
+            ]
+        }
+    },
+    "settings": [
+        {
+            "description": "Sketchfab API token for authenticated requests and downloads",
+            "category": "app_events.on_app_initialization_complete",
+            "contents": {
+                "secrets_to_register": [
+                    "SKETCHFAB_API_TOKEN"
+                ]
+            }
+        }
+    ],
+    "categories": [
+        {
+            "SketchfabSearch": {
+                "color": "border-blue-500",
+                "title": "Sketchfab Search",
+                "description": "Search and retrieve 3D model data from Sketchfab",
+                "icon": "Search"
+            }
+        },
+        {
+            "SketchfabViewer": {
+                "color": "border-green-500",
+                "title": "Sketchfab Viewer",
+                "description": "Generate embeddable 3D model viewers using the Sketchfab Viewer API",
+                "icon": "Eye"
+            }
+        },
+        {
+            "SketchfabDownload": {
+                "color": "border-orange-500",
+                "title": "Sketchfab Download",
+                "description": "Download 3D models from Sketchfab",
+                "icon": "Download"
+            }
+        }
+    ],
+    "nodes": [
+        {
+            "class_name": "SearchModels",
+            "file_path": "search_models.py",
+            "metadata": {
+                "category": "SketchfabSearch",
+                "description": "Search for 3D models on Sketchfab by keyword, category, and filters using the Data API v3.",
+                "display_name": "Search Sketchfab Models"
+            }
+        },
+        {
+            "class_name": "GetModelInfo",
+            "file_path": "get_model_info.py",
+            "metadata": {
+                "category": "SketchfabSearch",
+                "description": "Get detailed information about a specific Sketchfab 3D model by UID or URL.",
+                "display_name": "Get Model Info"
+            }
+        },
+        {
+            "class_name": "GenerateViewerHTML",
+            "file_path": "generate_viewer_html.py",
+            "metadata": {
+                "category": "SketchfabViewer",
+                "description": "Generate embeddable HTML for the Sketchfab 3D model viewer with customizable options.",
+                "display_name": "Generate Viewer HTML"
+            }
+        },
+        {
+            "class_name": "ViewInBrowser",
+            "file_path": "view_in_browser.py",
+            "metadata": {
+                "category": "SketchfabViewer",
+                "description": "Open a 3D model viewer directly in your web browser to see the 3D object.",
+                "display_name": "View In Browser"
+            }
+        },
+        {
+            "class_name": "DownloadModel",
+            "file_path": "download_model.py",
+            "metadata": {
+                "category": "SketchfabDownload",
+                "description": "Download a 3D model from Sketchfab using the Download API (requires API token).",
+                "display_name": "Download Model"
+            }
+        }
+    ]
+}
