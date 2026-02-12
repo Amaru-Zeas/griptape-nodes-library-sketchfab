@@ -56,6 +56,13 @@
             }
         }
     ],
+    "widgets": [
+        {
+            "name": "SketchfabViewer",
+            "path": "SketchfabViewer.js",
+            "description": "Interactive 3D model viewer using the Sketchfab Viewer API"
+        }
+    ],
     "nodes": [
         {
             "class_name": "SearchModels",
@@ -73,6 +80,15 @@
                 "category": "SketchfabSearch",
                 "description": "Get detailed information about a specific Sketchfab 3D model by UID or URL.",
                 "display_name": "Get Model Info"
+            }
+        },
+        {
+            "class_name": "SketchfabViewerWidget",
+            "file_path": "sketchfab_viewer_widget.py",
+            "metadata": {
+                "category": "SketchfabViewer",
+                "description": "View a 3D model directly inside the node with interactive Sketchfab Viewer API controls.",
+                "display_name": "3D Model Viewer"
             }
         },
         {
