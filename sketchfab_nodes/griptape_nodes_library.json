@@ -48,6 +48,14 @@
             }
         },
         {
+            "OpenPose": {
+                "color": "border-pink-500",
+                "title": "OpenPose",
+                "description": "3D pose editing tools for human skeleton posing",
+                "icon": "Folder"
+            }
+        },
+        {
             "SketchfabDownload": {
                 "color": "border-orange-500",
                 "title": "Sketchfab Download",
@@ -61,6 +69,21 @@
             "name": "SketchfabViewer",
             "path": "SketchfabViewer.js",
             "description": "Interactive 3D model viewer using the Sketchfab Viewer API"
+        },
+        {
+            "name": "WebView",
+            "path": "WebView.js",
+            "description": "Embed any live website inside a node via iframe"
+        },
+        {
+            "name": "OpenPoseEditor",
+            "path": "OpenPoseEditor.js",
+            "description": "3D OpenPose skeleton editor with draggable joints for human pose creation"
+        },
+        {
+            "name": "TestWidget",
+            "path": "TestWidget.js",
+            "description": "Minimal test widget to verify rendering works"
         }
     ],
     "nodes": [
@@ -107,6 +130,33 @@
                 "category": "SketchfabViewer",
                 "description": "Open a 3D model viewer directly in your web browser to see the 3D object.",
                 "display_name": "View In Browser"
+            }
+        },
+        {
+            "class_name": "WebViewNode",
+            "file_path": "webview_node.py",
+            "metadata": {
+                "category": "SketchfabViewer",
+                "description": "Embed any live website inside the node - Sketchfab, OpenPose, or any URL.",
+                "display_name": "Web View"
+            }
+        },
+        {
+            "class_name": "OpenPoseEditor",
+            "file_path": "openpose_editor.py",
+            "metadata": {
+                "category": "OpenPose",
+                "description": "Interactive 3D skeleton editor for creating OpenPose-compatible human poses with draggable joints.",
+                "display_name": "OpenPose 3D Editor"
+            }
+        },
+        {
+            "class_name": "TestWidgetNode",
+            "file_path": "test_widget_node.py",
+            "metadata": {
+                "category": "SketchfabViewer",
+                "description": "Minimal test - if you see a green box, widgets work!",
+                "display_name": "Widget Test"
             }
         },
         {

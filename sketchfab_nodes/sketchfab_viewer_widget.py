@@ -52,7 +52,7 @@ class SketchfabViewerWidget(DataNode):
                 default_value={"model_uid": ""},
                 tooltip="Interactive 3D model viewer. Paste a UID/URL or connect model_uid input.",
                 allowed_modes={ParameterMode.PROPERTY, ParameterMode.OUTPUT},
-                traits={Widget(name="SketchfabViewer", library="sketchfab_nodes")},
+                traits={Widget(name="SketchfabViewer", library="Sketchfab 3D Library")},
             )
         )
 
