@@ -1,3 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
 .env
 .venv
 example_nodes_template/__pycache__/
